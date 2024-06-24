@@ -11,10 +11,11 @@ check_key() {
   local api_key="$1"
   local data='{"longDynamicLink": "https://sub.example.com/?link=https://example.org"}'
   response=$(curl -s -X POST "https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=$api_key" -H 'Content-Type: application/json' -d "$data")
-  if [[ $response!= *"API key not valid"* ]]; then
+  if [[ $response != *"API key not valid"* ]]; then
     echo "[+] Your Firebase api key is valid"
     exit 0
   else
+    echo "[+] Your Firebase api key is invalid"
     exit 1
   fi
 }
