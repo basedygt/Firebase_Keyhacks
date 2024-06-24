@@ -3,7 +3,7 @@
 if [[ $# -ne 1 && $# -ne 2 ]]; then
   echo -e "\nUsage: $0 <key_to_check> [<file_to_write_valid_key_to>]\n"
   echo -e "Example:"
-  echo -e " ./key_checker.sh AIzaSyBoLkjS3zdlqscfqv2scaB-IOe98QRadsc output.txt"
+  echo -e " ./dynlink_key_checker.sh AIzaSyBoLkjS3zdlqscfqv2scaB-IOe98QRadsc output.txt"
   exit 0
 fi
 
